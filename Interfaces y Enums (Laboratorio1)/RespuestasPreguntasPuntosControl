@@ -1,0 +1,41 @@
+// Punto de Control 1 (Sección 1.2)
+// 1. ¿Qué palabra clave usa una clase para "firmar" una interfaz? Usa la palabra implements.
+// 2. ¿Por qué el método de una interfaz termina en ; y no tiene llaves? Porque la interfaz solo declara la firma del método; el cuerpo lo escribe cada clase que la implementa.
+// 3. ¿Es válido escribir Sonoro s = new Sonoro();? ¿Por qué? No es válido, ya que una interfaz no se puede instanciar, únicamente sirve como tipo de referencia.
+
+// Punto de Control 2 (Sección 1.4)
+// 1. ¿Cuántas clases puede extender una clase? ¿Cuántas interfaces puede implementar? Una clase solo puede extender de una clase, pero puede implementar todas las interfaces que necesite.
+// 2. Si Volador v = new Pato();, ¿puedes escribir v.nadar()? No, porque el tipo declarado es Volador y ese contrato no incluye el método nadar().
+// 3. ¿Qué modificadores tiene implícitamente int LIMITE = 5; dentro de una interfaz? Tiene implícitamente los modificadores public static final.
+
+// Punto de Control 3 (Sección 1.6)
+// 1. ¿Cuántos métodos abstractos tiene una interfaz funcional? Tiene exactamente un método abstracto.
+// 2. Reescribe como lambda: una Function<Integer, Integer> que devuelva el cuadrado. Function<Integer, Integer> cuadrado = n -> n * n;.
+// 3. ¿Qué interfaz de java.util.function usarías para "¿el número es positivo?" Usarías Predicate<Integer>, dado que devuelve un valor boolean.
+
+// Punto de Control 4 (Sección 1.10)
+// 1. ¿Qué devuelve compareTo si el objeto actual debe ir después del otro? Devuelve un número positivo.
+// 2. Tienes Ave, Avion y Superheroe. ¿Clase abstracta o interfaz para "volar"? ¿Por qué? Una interfaz Volador, ya que no conforman una familia y solo comparten la capacidad de volar.
+// 3. ¿Qué ventaja da sealed al usar switch? El compilador verifica que se cubran todos los casos permitidos, eliminando la necesidad de usar un caso default.
+
+// Punto de Control 5 (Sección 2.5)
+// 1. ¿Por qué es seguro comparar enums con == en lugar de equals? Es seguro porque cada constante de un enum representa un objeto único en memoria.
+// 2. ¿Qué imprime DiaSemana.DOMINGO.ordinal()? Imprime 6.
+// 3. ¿Qué pasa si en una expresión switch sobre DiaSemana olvidas el caso JUEVES y no hay default? El código no compila y arroja un error indicando que la expresión switch no cubre todos los valores de entrada posibles.
+
+// Punto de Control 6 (Sección 2.12)
+// 1. ¿En qué orden deben ir las constantes y los atributos dentro de un enum? Primero se declaran las constantes finalizando con ;, y luego se colocan los atributos, el constructor y los métodos.
+// 2. ¿Puede un enum usar extends? ¿Y implements? No puede usar extends porque ya hereda por defecto de Enum, pero sí puede usar implements.
+// 3. ¿Por qué EnumMap imprime las claves en orden de la semana? Porque ordena los elementos basándose en el ordinal de cada constante.
+
+// Autoevaluación (Sección 3.4)
+// b (public abstract).
+// c (Sonoro s = new Perro();).
+// c (Error: la clase debe sobrescribirlo).
+// b (Una con un método abstracto y tres default).
+// c (Consumer).
+// b (2).
+// c (IllegalArgumentException).
+// b (Es siempre privado).
+// c (name() o un código propio).
+// b (Una interfaz MetodoPago).
